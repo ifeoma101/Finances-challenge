@@ -87,6 +87,35 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+var sumTotal = 0 
+var monthChange = 0
+
+  let totalmonths= finances.length;
+  console.log(totalmonths) 
+
+  for (let i = 0; i < finances.length; i++) {
+  //sumTotal = sumTotal + finances[i][1] 
+  sumTotal += finances[i][1]
+//console.log(finances[i][1])
+// Keep track of changes in profit/loss
+if(i != 0){
+
+  //variable to tell differnce between current and previous month 
+  var monthDifference= finances[i][1] - finances[i-1][1]
+monthChange += monthDifference 
+}
+  }
+console.log(sumTotal);
+console.log(monthChange/85)
+
+// The average of the **changes** in Profit/Losses over the entire period.
+//You will need to track what the total change in Profit/Losses are from month to month and then find the average.
+//(`Total/(Number of months - 1)`)
+
+//The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period.
+
+//The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period.
+
 
 
 
